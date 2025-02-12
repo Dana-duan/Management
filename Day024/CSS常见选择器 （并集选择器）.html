@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>测试并集选择器</title>
+    <style>
+        /* 使用并集选择器为 h1 和 p 元素设置相同的样式 */
+        h1, p {
+            color: blue;
+            font-family: Arial, sans-serif;
+        }
+
+        /* 单独为 h1 设置额外的样式 */
+        h1 {
+            font-size: 2.5em;
+            text-decoration: underline;
+        }
+
+        /* 单独为 p 设置额外的样式 */
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <h1>这是一个标题</h1>
+    <p>这是一个段落，使用了并集选择器。</p>
+    <p>这是另一个段落，同样应用了并集选择器的样式。</p>
+    <div>这个 div 元素没有使用并集选择器，因此不会应用上述样式。</div>
+</body>
+</html> 

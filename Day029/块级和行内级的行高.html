@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* 通用样式 */
+        .box {
+            margin: 10px;
+            padding: 10px;
+            border: 2px solid #333;
+        }
+
+        /* 块级元素示例 */
+        .block {
+            width: 300px;
+            height: 100px;
+            background-color: lightblue;
+        }
+
+        /* 行内元素示例 */
+        .inline {
+            width: 300px;   /* 实际不会生效 */
+            height: 100px;  /* 实际不会生效 */
+            background-color: lightcoral;
+        }
+
+        /* 特殊处理的行内块 */
+        .inline-block {
+            display: inline-block;
+            width: 200px;
+            height: 60px;
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h3>块级元素（div）</h3>
+        <div class="block">
+            我可以设置 width 和 height ✅<br>
+            默认占满父容器宽度
+        </div>
+    </div>
+
+    <div class="box">
+        <h3>行内元素（span）</h3>
+        <span class="inline">
+            我设置的 width/height 无效 ❌<br>
+            尺寸由内容决定
+        </span>
+    </div>
+
+    <div class="box">
+        <h3>行内块元素（inline-block）</h3>
+        <span class="inline-block">我可以设置宽高 ✅</span>
+        <span class="inline-block">同时保持行内特性</span>
+    </div>
+</body>
+</html>

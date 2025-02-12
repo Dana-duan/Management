@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang ="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+        content="width=device-width,initial-scale=1.0">
+        <title>段瑞瑞尝试把最近练习的内容手动录入</title>
+    </head>
+    <body>
+        <h1>首先测试HTML文件的基本结构</h1>
+        <p>发现现在的工具很好，单标签，双标签，录入后系统都可以自动识别</p>
+        <p>而且完成了自动缩进的工作，记得最开始的时候大佬说是要注意格式，习惯要养好</p>
+        <p>而且我发现中文的标点符号和代码中的标点符号录入的时候系统会提示</p>
+        <p>但是目前还没有跟网址对接起来，如果能对接起来的话，话估计可以直接看到网页的变化</p>
+    </body>
+</html>

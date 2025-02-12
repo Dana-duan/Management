@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动态伪类测试</title>
+    <style>
+        /* 默认样式 */
+        a {
+            color: blue;
+            text-decoration: none;
+            font-size: 20px;
+            transition: color 0.3s, background-color 0.3s;
+        }
+
+        /* 鼠标悬停时的样式 */
+        a:hover {
+            color: red;
+            background-color: yellow;
+        }
+
+        /* 链接被点击时的样式 */
+        a:active {
+            color: green;
+        }
+
+        /* 链接获得焦点时的样式 */
+        a:focus {
+            outline: 2px solid orange;
+        }
+
+        /* 已访问链接的样式 */
+        a:visited {
+            color: purple;
+        }
+
+        /* 特定链接的样式 */
+        #link1 {
+            color: red;
+        }
+        #link2 {
+            color: green;
+        }
+        #link3 {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>动态伪类测试</h1>
+    <p>这是一个<a href="https://vip1-hz.jdy.com/" id="link3">精斗云链接</a>，请尝试悬停、点击和访问它。</p>
+    <div>
+        <a href="https://tongyi.aliyun.com/" id="link1">测试链接1</a>
+        <a href="https://chat.deepseek.com/" id="link2">测试链接2</a>
+        <a href="https://vip1-hz.jdy.com/" id="link3">测试链接3</a>
+    </div>
+</body>
+</html>

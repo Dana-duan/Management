@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 继承示例</title>
+    <style>
+        /* 父元素样式 */
+        .parent {
+            color: blue; /* 可继承属性 */
+            font-size: 20px; /* 可继承属性 */
+            border: 2px solid red; /* 不可继承属性 */
+            padding: 10px; /* 不可继承属性 */
+        }
+
+        /* 子元素样式 */
+        .child {
+            color: inherit; /* 强制继承父元素的颜色 */
+            border: inherit; /* 强制继承父元素的边框 */
+        }
+
+        /* 另一个子元素，不强制继承 */
+        .child-no-inherit {
+            color: green; /* 覆盖继承的颜色 */
+            border: 1px dashed black; /* 覆盖继承的边框 */
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        父元素
+        <div class="child">子元素（强制继承）</div>
+        <div class="child-no-inherit">子元素（不强制继承）</div>
+    </div>
+</body>
+</html>

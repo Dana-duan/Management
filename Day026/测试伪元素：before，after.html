@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>测试伪元素 ::before 和 ::after</title>
+    <style>
+        .box {
+
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            margin: 30px;
+            font-size: 3em;
+            text-align: center;
+        }
+
+        /* 使用 ::before 在元素内容之前添加内容 */
+        .box::before {
+            content: "开始：";
+            color: green;
+            font-weight: bold;
+        }
+
+        /* 使用 ::after 在元素内容之后添加内容 */
+        .box::after {
+            content: "：结束";
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    这是主要内容。
+</div>
+
+</body>
+</html>

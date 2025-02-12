@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>交集选择器测试</title>
+    <style>
+        /* 标签与类名的交集选择器 */
+        div.box {
+            color: red;
+            font-size: 30px;
+        }
+
+        /* 标签、类名与ID的交集选择器 */
+        p.box#special {
+            color: blue;
+            text-decoration: underline;
+        }
+
+        /* 类名与属性的交集选择器 */
+        .box[title] {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">我是div元素（被div.box选中）</div>
+    <p class="box">我是普通p元素（未被特殊样式选中）</p>
+    <p class="box" id="special">我是带ID的p元素（被p.box#special选中）</p>
+    <div class="box" title="测试">我是带title属性的div（被.box[title]选中）</div>
+</body>
+</html>

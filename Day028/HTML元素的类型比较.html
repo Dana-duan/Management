@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML元素类型示例</title>
+    <style>
+        /* 用颜色区分块级和内联元素 */
+        .block {
+            background: lightblue;
+            margin: 5px;
+            padding: 5px;
+        }
+        .inline {
+            background: lightgreen;
+            margin: 5px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>HTML元素类型</h1>
+
+    <!-- 块级元素示例 -->
+    <div class="block">
+        <h2>块级元素 (Block-level)</h2>
+        <p>特点：独占一行，默认宽度填满父容器</p>
+        <ul>
+            <li>&lt;div&gt; - 通用容器</li>
+            <li>&lt;p&gt; - 段落</li>
+            <li>&lt;h1&gt;-&lt;h6&gt; - 标题</li>
+            <li>&lt;ul&gt;, &lt;ol&gt;, &lt;li&gt; - 列表</li>
+        </ul>
+    </div>
+
+    <!-- 内联元素示例 -->
+    <div class="block">
+        <h2>内联元素 (Inline)</h2>
+        <p>特点：不换行，宽度由内容决定</p>
+        <p>
+            <span class="inline">&lt;span&gt;</span>
+            <a href="#" class="inline">&lt;a&gt;</a>
+            <strong class="inline">&lt;strong&gt;</strong>
+            <em class="inline">&lt;em&gt;</em>
+        </p>
+    </div>
+
+    <!-- 特殊元素示例 -->
+    <div class="block">
+        <h2>特殊类型</h2>
+        <p>&lt;img&gt;：虽然是内联元素，但可以设置宽高（替换元素）</p>
+        <img src="https://picsum.photos/100" alt="示例图片">
+        
+        <p>&lt;input&gt;：内联块级元素（可以设置宽高但不换行）</p>
+        <input type="text" placeholder="输入框">
+    </div>
+</body>
+</html>
