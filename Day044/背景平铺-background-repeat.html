@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>背景图重复示例</title>
+    <style>
+        body {
+            background-image: url('微信图片_20250222220935.png'); /* 替换为你的背景图片路径 */
+            background-repeat: repeat; /* 默认值，背景图在水平和垂直方向重复 */
+        }
+
+        .no-repeat {
+            background-repeat: no-repeat; /* 背景图不重复 */
+        }
+
+        .repeat-x {
+            background-repeat: repeat-x; /* 背景图仅在水平方向重复 */
+        }
+
+        .repeat-y {
+            background-repeat: repeat-y; /* 背景图仅在垂直方向重复 */
+        }
+
+        .container {
+            width: 300px;
+            height: 200px;
+            border: 1px solid #000;
+            margin: 20px;
+            padding: 10px;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>默认背景重复</p>
+    </div>
+
+    <div class="container no-repeat">
+        <p>背景不重复</p>
+    </div>
+
+    <div class="container repeat-x">
+        <p>背景水平重复</p>
+    </div>
+
+    <div class="container repeat-y">
+        <p>背景垂直重复</p>
+    </div>
+</body>
+</html>
