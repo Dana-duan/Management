@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>行内非替换元素的盒子模型</title>
+    <style>
+        .inline-element {
+            padding: 10px 20px; /* 内边距 */
+            border: 3px solid red; /* 边框 */
+            margin: 20px; /* 外边距 */
+            background-color: lightyellow;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        这是一个段落，包含一个
+        <span class="inline-element">行内非替换元素</span>，
+        注意它的盒子模型特性。
+    </p>
+</body>
+</html>

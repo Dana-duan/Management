@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Margin 折叠</title>
+<style>
+body {
+    font-family: sans-serif;
+}
+
+.box1 {
+    width: 200px;
+    height: 100px;
+    background-color: lightblue;
+    margin-bottom: 30px;
+}
+
+.box2 {
+    width: 200px;
+    height: 100px;
+    background-color: lightcoral;
+    margin-top: 50px;
+}
+
+.empty-box {
+    width: 100px;
+    height: 0; /* 或者不设置 height */
+    margin-top: 20px;
+    margin-bottom: 40px;
+    /* padding: 1px; 如果取消注释这一行，margin就不会折叠 */
+    /* border: 1px solid transparent; 如果取消注释这一行，margin就不会折叠 */
+}
+
+</style>
+</head>
+<body>
+
+<h1>Margin 折叠示例</h1>
+
+<div class="box1">第一个盒子 (margin-bottom: 30px)</div>
+<div class="box2">第二个盒子 (margin-top: 50px)</div>
+
+<p><strong>解释:</strong> <code>.box1</code> 的 <code>margin-bottom</code> (30px) 和 <code>.box2</code> 的 <code>margin-top</code> (50px) 会折叠，最终它们之间的距离是 50px，而不是 80px。</p>
+
+<hr>
+
+<div class="empty-box"></div>
+
+<p><strong>解释:</strong> 因为 <code>.empty-box</code> 是一个空的块级元素，它的 <code>margin-top</code> (20px) 和 <code>margin-bottom</code> (40px) 会折叠。  这意味着 <code>.empty-box</code> 本身占据的空间高度为 0，但它上方和下方的 margin 会合并，实际效果是，它会和它相邻的元素产生 40px 的间距，因为40px是margin-top和margin-bottom的最大值。</p>
+
+</body>
+</html>

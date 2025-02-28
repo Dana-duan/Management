@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Margin 上下传递</title>
+<style>
+body {
+    font-family: sans-serif;
+}
+
+.container {
+    width: 300px;
+    border: 1px solid blue;
+    margin-top: 50px; /* 父元素的 margin-top */
+    /* padding-top: 1px;  如果取消注释这一行，就可以阻止 margin 传递 */
+    /* border-top: 1px solid transparent;  如果取消注释这一行，也可以阻止 margin 传递 */
+    /* overflow: hidden;  如果取消注释这一行，也可以阻止 margin 传递 */
+}
+
+.child {
+    width: 200px;
+    height: 100px;
+    background-color: lightcoral;
+    margin-top: 30px; /* 子元素的 margin-top */
+}
+
+.container-bottom {
+    width: 300px;
+    border: 1px solid green;
+    margin-bottom: 50px; /* 父元素的 margin-bottom */
+    /* padding-bottom: 1px;  如果取消注释这一行，就可以阻止 margin 传递 */
+    /* border-bottom: 1px solid transparent;  如果取消注释这一行，也可以阻止 margin 传递 */
+    /* overflow: hidden;  如果取消注释这一行，也可以阻止 margin 传递 */
+}
+
+.child-bottom {
+    width: 200px;
+    height: 100px;
+    background-color: lightblue;
+    margin-bottom: 40px; /* 子元素的 margin-bottom */
+}
+
+</style>
+</head>
+<body>
+
+<h1>Margin 上下传递示例</h1>
+
+<div class="container">
+    <div class="child">第一个子元素</div>
+</div>
+
+<div class="container-bottom">
+    <div class="child-bottom">最后一个子元素</div>
+</div>
+
+<p><strong>解释:</strong></p>
+<ol>
+    <li>在第一个例子中，由于 <code>.container</code> 没有 <code>padding-top</code> 或 <code>border-top</code>,  所以 <code>.container</code> 的 <code>margin-top</code> 会和 <code>.child</code> 的 <code>margin-top</code> 发生折叠, 取最大值 (50px)。  最终 <code>.container</code> 的上边距为 50px，而不是 80px (50px + 30px)。</li>
+    <li>在第二个例子中，由于 <code>.container-bottom</code> 没有 <code>padding-bottom</code> 或 <code>border-bottom</code>,  所以 <code>.container-bottom</code> 的 <code>margin-bottom</code> 会和 <code>.child-bottom</code> 的 <code>margin-bottom</code> 发生折叠, 取最大值 (50px)。 最终 <code>.container-bottom</code> 的下边距为 50px，而不是 90px (50px + 40px)。</li>
+</ol>
+
+</body>
+</html>

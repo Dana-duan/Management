@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>盒子模型示例</title>
+    <style>
+        .box {
+            width: 200px;          /* 内容宽度 */
+            height: 100px;        /* 内容高度 */
+            padding: 20px;         /* 内边距 */
+            border: 10px solid black; /* 边框 */
+            margin: 30px;          /* 外边距 */
+            background-color: lightblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">这是一个盒子</div>
+    <div>盒子模型的组成部分：
+        内容（Content）：元素的实际内容，比如文本、图片等。
+        
+        内边距（Padding）：内容与边框之间的空间。
+        
+        边框（Border）：围绕内容和内边距的边框。
+        
+        外边距（Margin）：盒子与其他元素之间的空间。
+        
+        盒子尺寸的计算：
+        盒子的总宽度和高度是由内容、内边距、边框和外边距共同决定的。
+        
+        总宽度 = width + padding-left + padding-right + border-left + border-right + margin-left + margin-right
+        
+        总高度 = height + padding-top + padding-bottom + border-top + border-bottom + margin-top + margin-bottom</div>
+</body>
+</html>

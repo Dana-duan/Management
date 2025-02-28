@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Margin 传递和折叠</title>
+<style>
+/* CSS 样式 */
+body {
+    font-family: sans-serif;
+}
+.container {
+    width: 300px;
+    border: 1px solid blue;
+    /* 容器的边框 */
+    /* 情况1：没有设置父元素的padding, 容器的margin-top会传递给子元素 */
+    margin-top: 20px;
+    /* 为了演示传递和折叠，设置了 margin-top */
+    overflow: auto;
+    /* 为了避免 margin 传递，可以添加 overflow: auto 或 hidden */
+}
+
+.child {
+    width: 200px;
+    height: 100px;
+    background-color: lightcoral;
+    margin-top: 30px;
+    /* 子元素的 margin-top */
+    margin-bottom: 40px;
+    /* 子元素的 margin-bottom */
+}
+
+.sibling {
+    width: 200px;
+    height: 100px;
+    background-color: lightgreen;
+    margin-top: 50px; /* 与上一个元素的 margin-bottom 折叠 */
+}
+
+.container-bottom {
+    border: 1px solid purple;
+    width: 300px;
+    /* 情况2：没有设置父元素的padding, 容器的margin-bottom会传递给子元素 */
+    margin-bottom: 20px;
+}
+
+.child-bottom {
+    height: 100px;
+    background-color: skyblue;
+    margin-bottom: 30px;
+    /* 子元素的 margin-bottom */
+}
+
+.sibling-bottom {
+    height: 100px;
+    background-color: orange;
+    margin-top: 40px;
+}
+</style>
+</head>
+<body>
+
+<h1>Margin 传递和折叠示例</h1>
+
+<div class="container">
+    <div class="child">第一个子元素 (Margin-top: 30px)</div>
+    <div class="sibling">第二个子元素 (Margin-top: 50px)</div>
+</div>
+
+<div class="container-bottom">
+    <div class="child-bottom">最后一个子元素 (Margin-bottom: 30px)</div>
+    <div class="sibling-bottom">第二个子元素 (Margin-top: 40px)</div>
+</div>
+
+<p><strong>解释:</strong></p>
+<ol>
+    <li>在第一个例子中，<code>.container</code> 的 <code>margin-top</code> 会和 <code>.child</code> 的 <code>margin-top</code> 发生折叠, 取最大值。</li>
+    <li>在第一个例子中，<code>.child</code> 的 <code>margin-bottom</code> 和 <code>.sibling</code> 的 <code>margin-top</code> 发生折叠, 取最大值。</li>
+    <li>在第二个例子中，<code>.child-bottom</code> 的 <code>margin-bottom</code> 会和 <code>.container-bottom</code> 的 <code>margin-bottom</code> 发生折叠, 取最大值。</li>
+</ol>
+
+</body>
+</html>
